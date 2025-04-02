@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../../../stylesheets/style.css">
+
+
+    <title>Grywalnia</title>
+
+</head>
+<body>
+<div id="ozd" >
+
+</div>
+<header class="header">
+
+    <h1> Wszystko o grach</h1>
+</header>
+<main id="app">
+
+
+
+
+    <ul class="user_bar">
+        <li><a href="/">Glowna</a> </li>
+
+
+        <li><a href="/gra">Gry</a> </li>
+        <li><a href="/wydawnictwo">Wydawnictwa gier</a> </li>
+        <li><a class="rights" href="/logowanie">Logowanie</a> </li>
+        <li><a class="rights" href="/admin">Admin</a> </li>
+
+    </ul>
+
+    <ul class="user_bar">
+
+
+        <li><a href="/admin">dodaj gre</a> </li>
+        <li><a href="/wydawnictwo/addform">dodaj wydawnictwo</a> </li>
+
+
+
+    </ul>
+
+
+
+
+
+        <% wydawnictwa.forEach(wydawnictwo => { %>
+        <button onclick="location.href='/gra/wydawnictwa/delete/<%= wydawnictwo.wydawnictwo_id %>_<%= id.id%>'"><a>Usuń <%= wydawnictwo.nazwa %> </a></button>
+        <% }) %>
+
+
+    <form id="addgame" action="/gra/wydawnictwa/<%= id.id%>" method="post">
+
+        <input type="text" name="nazwa" placeholder="Nazwa wydawnictwa" id="nazwa"  >
+
+
+
+        <input type="submit" value="dodaj">
+    </form>
+
+
+
+
+
+</main>
+<footer>
+    Utworzone przez Jonasz Marczewski
+</footer>
+</body>
+</html>

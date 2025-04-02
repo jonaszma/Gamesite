@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/style.css">
+
+
+    <title>Grywalnia</title>
+
+</head>
+<body>
+<div id="ozd" >
+
+</div>
+<header class="header">
+
+    <h1> Wszystko o grach</h1>
+</header>
+<main id="app">
+
+
+
+
+    <ul class="user_bar">
+        <li><a href="/">Glowna</a> </li>
+
+
+        <li><a href="/gra">Gry</a> </li>
+        <li><a href="/wydawnictwo">Wydawnictwa gier</a> </li>
+        <li><a class="rights" href="/logowanie">Logowanie</a> </li>
+        <li><a class="rights" href="/admin">Admin</a> </li>
+
+    </ul>
+
+    <ul class="user_bar">
+
+
+        <li><a href="/admin">dodaj gre</a> </li>
+        <li><a href="/wydawnictwo/addform">dodaj wydawnictwo</a> </li>
+
+
+
+    </ul>
+
+
+
+    <form id="addgame" action="/gra/update/<%= game.gra_id %>" method="post">
+
+        <input type="text" name="nazwa" placeholder="Nazwa gry" id="nazwa" value="<%= game.gra %>" >
+
+        <input type="text" name="opis" placeholder="Opis Gry" id="opis" value="<%= game.gra_opis %>" >
+
+        <input type="date" name="rok_powstania" placeholder="rok powstania" id="opis" value="<%=game.rok_powstania  %>" >
+
+
+
+
+
+        <input type="submit" value="Aktualizuj">
+    </form>
+
+    <li><a href="/gra/wydawnictwa/<%= game.gra_id %>">wydawnictwa</a> </li>
+
+
+
+
+</main>
+<footer>
+    Utworzone przez Jonasz Marczewski
+</footer>
+</body>
+</html>

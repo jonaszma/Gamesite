@@ -1,0 +1,196 @@
+body{
+  background-color: lightgray;
+
+
+
+}
+table{
+  border-collapse: collapse;
+  border: 1px solid black;
+
+}
+
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid cadetblue;
+
+}
+tr:hover{
+  background-color: lightblue;
+}
+tr:nth-child(even) {
+  background-color: lightsteelblue;
+}
+h1 {
+  text-align: center;
+  color: blue;
+  padding: 10px;
+}
+.header{
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.user_bar{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  bottom: 20px;
+  background-color: lightblue;
+  overflow: hidden;
+
+
+}
+.wyszukiwanie{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: sticky;
+  top: 35px;
+  bottom: 20px;
+  background-color: firebrick;
+  overflow: hidden;
+  position: sticky;
+}
+
+.user_bar>li {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px;
+
+
+
+}
+#logowanie {
+  display: flex;
+
+  list-style-type: none;
+  padding: 20px;
+  flex-direction: column;
+  width: 200px;
+  align-items: center;
+  justify-content: center;
+
+}
+#logowanie input {
+  margin-bottom: 10px;
+}
+.user_bar>li>a {
+  text-decoration: none;
+
+}
+.rights {
+  float: right;
+}
+.user_bar>li:hover {
+  background-color: lightcyan;
+}
+
+
+ul{
+  list-style-type: circle;
+  background-color: cadetblue;
+}
+a{
+  text-decoration: none;
+}
+
+ol{
+  list-style-type: upper-roman;
+  padding-block: 5px;
+  background-color: white;
+}
+li{
+
+}
+p{
+  text-align: justify;
+
+}
+.links{
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+}
+img{
+  display: block;
+  float: right;
+  margin-left: 10px;
+  width: 500px;
+  height: auto;
+}
+footer{
+  text-align: center;
+  padding: 10px;
+  background-color: DarkSalmon;
+  color: white;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+.ozd>*{
+  top: 0;
+  width: 100px;
+  hight: 50px;
+
+  background-repeat:repeat-x;
+  background-position:top center;
+  margin-left: 0;
+  margin-right: 0;
+}
+#ozd {
+  height: 50px;
+  width: 99%;
+  padding: 10px;
+  background-image: url("../images/game.png");
+  background-repeat:repeat-x;
+  background-size: contain;
+  background-origin: content-box;
+}
+@media print {
+  .user_bar, .footer, .wyszukiwanie {
+    display: none;
+    font-family: "Times New Roman";
+  }
+
+}
+
+.imageflex { display: flex; }
+.imageflexcontent { margin-left: 5px; margin-top: 0; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

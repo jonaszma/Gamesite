@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
+
+</head>
+<body>
+<div id="ozd" >
+
+</div>
+<header class="header">
+    Informacje o grach
+</header>
+<ul class="user_bar">
+    <li><a href="/">Glowna</a> </li>
+
+
+    <li><a href="/gra">Gry</a> </li>
+    <li><a href="/wydawnictwo">Wydawnictwa gier</a> </li>
+    <li><a class="rights" href="/logowanie">Logowanie</a> </li>
+    <li><a class="rights" href="/admin">Admin</a> </li>
+
+</ul>
+<form id="wyszukiwanie"  action="/gra/search" method="post">
+    <table>
+
+        <tr class="wyszukiwanie">
+
+            <%# <th>obraz</th>     %>
+            <th><input type="text" id="NazwaGry" name="NazwaGry"  placeholder="Nazwa Gry" >  </th>
+            <th><input type="text" id="NazwaWydawnictwa" name="NazwaWydawnictwa" placeholder="Nazwa Wydawnictwa" > </th>
+            <th> <input type="date" id="RokWydania" name="RokWydania" placeholder="Rok Wydania" > </th>
+
+
+            <th> <input id="Submit" type="submit" ></th>
+
+
+
+
+        </tr>
+        <tr>
+            <% games.forEach(game => { %>
+                <tr>
+                    <%# <td><img src="https://f01.esfr.pl/files/storage/article/photo/fb/68/db/32a9a4442db2e3cd9f931061b0/XboxOne.png" alt="gry" width="50" height="50"></td>%>
+                    <td><a href="/gra/<%= game.gra_id %>"><%= game.gra %></a> </td>
+                    <td><%= game.wydawnictwo %> </td>
+                    <td><%= game.rok_powstania  %> </td>
+
+
+
+
+
+
+                </tr>
+            <% }) %>
+
+        </tr>
+
+
+
+    </table>
+    <div id="pagination">
+        <% if (currentPage > 1) { %>
+            <a href="/gra?page=<%= currentPage - 1 %>">&laquo; Poprzednia</a>
+        <% } %>
+
+        <% for (let i = 1; i <= totalPages; i++) { %>
+            <a href="/gra?page=<%= i %>" class="<%= currentPage === i ? 'active' : '' %>">
+                <%= i %>
+            </a>
+        <% } %>
+
+        <% if (currentPage < totalPages) { %>
+            <a href="/gra?page=<%= currentPage + 1 %>">Następna &raquo;</a>
+        <% } %>
+    </div>
+
+
+
+</form>
+
+</body>
+</html>
